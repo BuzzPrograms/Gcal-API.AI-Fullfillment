@@ -1,10 +1,4 @@
 <?php
-header('Content-Type: application/json');
-ob_start();
-$json = file_get_contents('php://input');
-$request = json_decode($json, true);
-$action = $request["result"]["action"];
-$parameters = $request["result"]["parameters"];
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -79,8 +73,8 @@ function expandHomeDirectory($path) {
     $starttime = 0;
     $endtime = 0;
   } else {
-    $starttime = $s['ukf72k2kglld4ac0t9nfpaiudc@group.calendar.google.com']['modelData']['busy'][0]['start'];
-    $endtime = $s['ukf72k2kglld4ac0t9nfpaiudc@group.calendar.google.com']['modelData']['busy'][0]['end'];
+    $starttime = strtotime($s['ukf72k2kglld4ac0t9nfpaiudc@group.calendar.google.com']['modelData']['busy'][0]['start']); //get starttime in Unix
+    $endtime = strtotime($s['ukf72k2kglld4ac0t9nfpaiudc@group.calendar.google.com']['modelData']['busy'][0]['end']); //get endtime in Unix
   }
   //log times
   
@@ -88,18 +82,9 @@ function expandHomeDirectory($path) {
   error_log($starttime, 0);
   error_log ('till:', 0);
   error_log ($endtime, 0);
+
   
-  $t = 
-  if ($starttime = 0) {
-   
-   $outputtext = 'Dan heb ik nog een plekje vrij!'
-   
-  } elseif (!$starttime = 0) {
-    $outputtext = 'ik heb een plekje vrij vanaf:'
-  }
-   
-   
-   
-   
-   
+  
+  
+  
 ?>
