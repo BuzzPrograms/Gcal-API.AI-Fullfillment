@@ -89,13 +89,18 @@ function expandHomeDirectory($path) {
   error_log ('till:', 0);
   error_log ($endtime, 0);
   
-  $t = 
+  $ds = date("d-m-Y h:i:sa", $starttime); //format time to a nicely readable format
+  $de = date("d-m-Y h:i:sa", $endtime);
+  
+  echo $ds $de
+  
   if ($starttime = 0) {
    
    $outputtext = 'Dan heb ik nog een plekje vrij!'
    
   } elseif (!$starttime = 0) {
-    $outputtext = 'ik heb een plekje vrij vanaf:'
+	
+    $outputtext = 'ik heb een plekje vrij voor:' .$ds. 'en na' .$de.
   }
    
    
