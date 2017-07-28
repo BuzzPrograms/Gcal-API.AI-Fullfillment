@@ -100,6 +100,9 @@ function expandHomeDirectory($path) {
    
   } elseif (!$starttime = 0) {
 	
+	
+	
+	
     $outputtext = 'ik heb een plekje vrij voor:' .$ds. 'en na' .$de.
   }
    
