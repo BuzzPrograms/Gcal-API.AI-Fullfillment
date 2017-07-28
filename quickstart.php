@@ -2,7 +2,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 
-define('APPLICATION_NAME', 'Get API ACCES TOKEN');
+define('APPLICATION_NAME', 'Cesar');
 define('CREDENTIALS_PATH', '~/.credentials/calendar-php-quickstart.json');
 define('CLIENT_SECRET_PATH', __DIR__ . '/client_secret.json');
 // If modifying these scopes, delete your previously saved credentials
@@ -75,7 +75,7 @@ $client = getClient();
 $service = new Google_Service_Calendar($client);
 
 // Print the next 10 events on the user's calendar.
-$calendarId = 'ukf72k2kglld4ac0t9nfpaiudc@group.calendar.google.com';
+$calendarId = 'primary';
 $optParams = array(
   'maxResults' => 10,
   'orderBy' => 'startTime',
@@ -96,3 +96,4 @@ if (count($results->getItems()) == 0) {
     printf("%s (%s)\n", $event->getSummary(), $start);
   }
 }
+?>
