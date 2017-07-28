@@ -49,4 +49,4 @@ php setup.php
 ````
 
 this wil ask you to open a link and paste the string you get back in the console
-now you can add the web linkt to the working directory in the API>AI fullfillment tab and start using it in your agent
+now you can add the web linkt to the working directory in the API.AI fullfillment tab and start using it in your agent
